@@ -1,0 +1,38 @@
+syntax = "proto2";
+
+message Point3D {
+    optional double x = 1 [default = nan];
+    optional double y = 2 [default = nan];
+    optional double z = 3 [default = nan];
+}
+
+message Box3D {
+    optional Point3D center = 1;
+    optional float length = 2;
+    optional float width = 3;
+    optional float height = 4;
+    optional float heading = 5;
+}
+
+message Header {
+    optional bytes version = 1;
+    optional uint64 timestamp = 2;
+}
+
+message Object {
+    optional uint32 id = 1;
+    enum Type {
+        UNKNOWN = 0;
+        VEHICLE = 1;
+        PEDESTRIAN = 2;
+        CYCLIST = 3;
+    };
+    optional Type type = 2;
+    optional float confidence = 3;
+    optional Box3D box = 4;
+}
+
+message Detection {
+    optional Header header = 1;
+    repeated Object object = 2;
+}
