@@ -1,22 +1,23 @@
 syntax = "proto2";
 
 message Point3D {
-    optional double x = 1 [default = nan];
-    optional double y = 2 [default = nan];
-    optional double z = 3 [default = nan];
+    optional double x = 1 [default = nan];  // m
+    optional double y = 2 [default = nan];  // m
+    optional double z = 3 [default = nan];  // m
 }
 
 message Box3D {
     optional Point3D center = 1;
-    optional float length = 2;
-    optional float width = 3;
-    optional float height = 4;
-    optional float heading = 5;
+    optional float length = 2;              // m
+    optional float width = 3;               // m
+    optional float height = 4;              // m
+    optional float heading = 5;             // rad
 }
 
 message Header {
     optional bytes version = 1;
     optional uint64 timestamp = 2;
+    optional uint64 relative_timestamp = 3;
 }
 
 message Object {
@@ -30,6 +31,8 @@ message Object {
     optional Type type = 2;
     optional float confidence = 3;
     optional Box3D box = 4;
+    optional float velocity_x = 5;          // m/s
+    optional float velocity_y = 6;          // m/s
 }
 
 message Detection {
