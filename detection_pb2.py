@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0f\x64\x65tection.proto\"9\n\x07Point3D\x12\x0e\n\x01x\x18\x01 \x01(\x01:\x03nan\x12\x0e\n\x01y\x18\x02 \x01(\x01:\x03nan\x12\x0e\n\x01z\x18\x03 \x01(\x01:\x03nan\"a\n\x05\x42ox3D\x12\x18\n\x06\x63\x65nter\x18\x01 \x01(\x0b\x32\x08.Point3D\x12\x0e\n\x06length\x18\x02 \x01(\x02\x12\r\n\x05width\x18\x03 \x01(\x02\x12\x0e\n\x06height\x18\x04 \x01(\x02\x12\x0f\n\x07heading\x18\x05 \x01(\x02\"H\n\x06Header\x12\x0f\n\x07version\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\x04\x12\x1a\n\x12relative_timestamp\x18\x03 \x01(\x04\"\xc0\x01\n\x06Object\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1a\n\x04type\x18\x02 \x01(\x0e\x32\x0c.Object.Type\x12\x12\n\nconfidence\x18\x03 \x01(\x02\x12\x13\n\x03\x62ox\x18\x04 \x01(\x0b\x32\x06.Box3D\x12\x12\n\nvelocity_x\x18\x05 \x01(\x02\x12\x12\n\nvelocity_y\x18\x06 \x01(\x02\"=\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07VEHICLE\x10\x01\x12\x0e\n\nPEDESTRIAN\x10\x02\x12\x0b\n\x07\x43YCLIST\x10\x03\"=\n\tDetection\x12\x17\n\x06header\x18\x01 \x01(\x0b\x32\x07.Header\x12\x17\n\x06object\x18\x02 \x03(\x0b\x32\x07.Object'
+  serialized_pb=b'\n\x0f\x64\x65tection.proto\"9\n\x07Point3D\x12\x0e\n\x01x\x18\x01 \x01(\x01:\x03nan\x12\x0e\n\x01y\x18\x02 \x01(\x01:\x03nan\x12\x0e\n\x01z\x18\x03 \x01(\x01:\x03nan\"a\n\x05\x42ox3D\x12\x18\n\x06\x63\x65nter\x18\x01 \x01(\x0b\x32\x08.Point3D\x12\x0e\n\x06length\x18\x02 \x01(\x02\x12\r\n\x05width\x18\x03 \x01(\x02\x12\x0e\n\x06height\x18\x04 \x01(\x02\x12\x0f\n\x07heading\x18\x05 \x01(\x02\"H\n\x06Header\x12\x0f\n\x07version\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\x04\x12\x1a\n\x12relative_timestamp\x18\x03 \x01(\x04\"\xca\x01\n\x06Object\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1a\n\x04type\x18\x02 \x01(\x0e\x32\x0c.Object.Type\x12\x12\n\nconfidence\x18\x03 \x01(\x02\x12\x13\n\x03\x62ox\x18\x04 \x01(\x0b\x32\x06.Box3D\x12\x12\n\nvelocity_x\x18\x05 \x01(\x02\x12\x12\n\nvelocity_y\x18\x06 \x01(\x02\"G\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07VEHICLE\x10\x01\x12\x0e\n\nPEDESTRIAN\x10\x02\x12\x0b\n\x07\x43YCLIST\x10\x03\x12\x08\n\x04\x43ONE\x10\x04\"\x1b\n\x04\x43\x65ll\x12\x13\n\x0bis_passable\x18\x01 \x01(\x08\"\x9b\x01\n\rFreespaceInfo\x12\r\n\x05x_min\x18\x01 \x01(\x02\x12\r\n\x05x_max\x18\x02 \x01(\x02\x12\r\n\x05y_min\x18\x03 \x01(\x02\x12\r\n\x05y_max\x18\x04 \x01(\x02\x12\r\n\x05z_min\x18\x05 \x01(\x02\x12\r\n\x05z_max\x18\x06 \x01(\x02\x12\x12\n\nresolution\x18\x07 \x01(\x02\x12\r\n\x05x_num\x18\x08 \x01(\x03\x12\r\n\x05y_num\x18\t \x01(\x03\"?\n\tFreespace\x12\x1c\n\x04info\x18\x01 \x01(\x0b\x32\x0e.FreespaceInfo\x12\x14\n\x05\x63\x65lls\x18\x02 \x03(\x0b\x32\x05.Cell\"`\n\tDetection\x12\x17\n\x06header\x18\x01 \x01(\x0b\x32\x07.Header\x12\x17\n\x06object\x18\x02 \x03(\x0b\x32\x07.Object\x12\x11\n\tfreespace\x18\x03 \x01(\x0c\x12\x0e\n\x06points\x18\x04 \x01(\x0c'
 )
 
 
@@ -51,11 +51,16 @@ _OBJECT_TYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CONE', index=4, number=4,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=383,
-  serialized_end=444,
+  serialized_end=454,
 )
 _sym_db.RegisterEnumDescriptor(_OBJECT_TYPE)
 
@@ -276,7 +281,166 @@ _OBJECT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=252,
-  serialized_end=444,
+  serialized_end=454,
+)
+
+
+_CELL = _descriptor.Descriptor(
+  name='Cell',
+  full_name='Cell',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='is_passable', full_name='Cell.is_passable', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=456,
+  serialized_end=483,
+)
+
+
+_FREESPACEINFO = _descriptor.Descriptor(
+  name='FreespaceInfo',
+  full_name='FreespaceInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x_min', full_name='FreespaceInfo.x_min', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='x_max', full_name='FreespaceInfo.x_max', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='y_min', full_name='FreespaceInfo.y_min', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='y_max', full_name='FreespaceInfo.y_max', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='z_min', full_name='FreespaceInfo.z_min', index=4,
+      number=5, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='z_max', full_name='FreespaceInfo.z_max', index=5,
+      number=6, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='resolution', full_name='FreespaceInfo.resolution', index=6,
+      number=7, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='x_num', full_name='FreespaceInfo.x_num', index=7,
+      number=8, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='y_num', full_name='FreespaceInfo.y_num', index=8,
+      number=9, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=486,
+  serialized_end=641,
+)
+
+
+_FREESPACE = _descriptor.Descriptor(
+  name='Freespace',
+  full_name='Freespace',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='info', full_name='Freespace.info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cells', full_name='Freespace.cells', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=643,
+  serialized_end=706,
 )
 
 
@@ -302,6 +466,20 @@ _DETECTION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='freespace', full_name='Detection.freespace', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='points', full_name='Detection.points', index=3,
+      number=4, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -314,20 +492,25 @@ _DETECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=446,
-  serialized_end=507,
+  serialized_start=708,
+  serialized_end=804,
 )
 
 _BOX3D.fields_by_name['center'].message_type = _POINT3D
 _OBJECT.fields_by_name['type'].enum_type = _OBJECT_TYPE
 _OBJECT.fields_by_name['box'].message_type = _BOX3D
 _OBJECT_TYPE.containing_type = _OBJECT
+_FREESPACE.fields_by_name['info'].message_type = _FREESPACEINFO
+_FREESPACE.fields_by_name['cells'].message_type = _CELL
 _DETECTION.fields_by_name['header'].message_type = _HEADER
 _DETECTION.fields_by_name['object'].message_type = _OBJECT
 DESCRIPTOR.message_types_by_name['Point3D'] = _POINT3D
 DESCRIPTOR.message_types_by_name['Box3D'] = _BOX3D
 DESCRIPTOR.message_types_by_name['Header'] = _HEADER
 DESCRIPTOR.message_types_by_name['Object'] = _OBJECT
+DESCRIPTOR.message_types_by_name['Cell'] = _CELL
+DESCRIPTOR.message_types_by_name['FreespaceInfo'] = _FREESPACEINFO
+DESCRIPTOR.message_types_by_name['Freespace'] = _FREESPACE
 DESCRIPTOR.message_types_by_name['Detection'] = _DETECTION
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -358,6 +541,27 @@ Object = _reflection.GeneratedProtocolMessageType('Object', (_message.Message,),
   # @@protoc_insertion_point(class_scope:Object)
   })
 _sym_db.RegisterMessage(Object)
+
+Cell = _reflection.GeneratedProtocolMessageType('Cell', (_message.Message,), {
+  'DESCRIPTOR' : _CELL,
+  '__module__' : 'detection_pb2'
+  # @@protoc_insertion_point(class_scope:Cell)
+  })
+_sym_db.RegisterMessage(Cell)
+
+FreespaceInfo = _reflection.GeneratedProtocolMessageType('FreespaceInfo', (_message.Message,), {
+  'DESCRIPTOR' : _FREESPACEINFO,
+  '__module__' : 'detection_pb2'
+  # @@protoc_insertion_point(class_scope:FreespaceInfo)
+  })
+_sym_db.RegisterMessage(FreespaceInfo)
+
+Freespace = _reflection.GeneratedProtocolMessageType('Freespace', (_message.Message,), {
+  'DESCRIPTOR' : _FREESPACE,
+  '__module__' : 'detection_pb2'
+  # @@protoc_insertion_point(class_scope:Freespace)
+  })
+_sym_db.RegisterMessage(Freespace)
 
 Detection = _reflection.GeneratedProtocolMessageType('Detection', (_message.Message,), {
   'DESCRIPTOR' : _DETECTION,

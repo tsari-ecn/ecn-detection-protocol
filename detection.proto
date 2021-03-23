@@ -27,6 +27,7 @@ message Object {
         VEHICLE = 1;
         PEDESTRIAN = 2;
         CYCLIST = 3;
+        CONE = 4;
     };
     optional Type type = 2;
     optional float confidence = 3;
@@ -35,7 +36,30 @@ message Object {
     optional float velocity_y = 6;          // m/s
 }
 
+message Cell {
+    optional bool is_passable = 1;
+}
+
+message FreespaceInfo {
+    optional float x_min = 1;
+    optional float x_max = 2;
+    optional float y_min = 3;
+    optional float y_max = 4;
+    optional float z_min = 5;
+    optional float z_max = 6;
+    optional float resolution = 7;
+    optional int64 x_num = 8;
+    optional int64 y_num = 9;
+}
+
+message Freespace {
+    optional FreespaceInfo info = 1;
+    repeated Cell cells = 2;
+}
+
 message Detection {
     optional Header header = 1;
     repeated Object object = 2;
+    optional bytes freespace = 3;
+    optional bytes points = 4;
 }
