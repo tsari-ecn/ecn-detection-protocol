@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0f\x64\x65tection.proto\"9\n\x07Point3D\x12\x0e\n\x01x\x18\x01 \x01(\x01:\x03nan\x12\x0e\n\x01y\x18\x02 \x01(\x01:\x03nan\x12\x0e\n\x01z\x18\x03 \x01(\x01:\x03nan\"a\n\x05\x42ox3D\x12\x18\n\x06\x63\x65nter\x18\x01 \x01(\x0b\x32\x08.Point3D\x12\x0e\n\x06length\x18\x02 \x01(\x02\x12\r\n\x05width\x18\x03 \x01(\x02\x12\x0e\n\x06height\x18\x04 \x01(\x02\x12\x0f\n\x07heading\x18\x05 \x01(\x02\"H\n\x06Header\x12\x0f\n\x07version\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\x04\x12\x1a\n\x12relative_timestamp\x18\x03 \x01(\x04\"\xca\x01\n\x06Object\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1a\n\x04type\x18\x02 \x01(\x0e\x32\x0c.Object.Type\x12\x12\n\nconfidence\x18\x03 \x01(\x02\x12\x13\n\x03\x62ox\x18\x04 \x01(\x0b\x32\x06.Box3D\x12\x12\n\nvelocity_x\x18\x05 \x01(\x02\x12\x12\n\nvelocity_y\x18\x06 \x01(\x02\"G\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07VEHICLE\x10\x01\x12\x0e\n\nPEDESTRIAN\x10\x02\x12\x0b\n\x07\x43YCLIST\x10\x03\x12\x08\n\x04\x43ONE\x10\x04\"\x1b\n\x04\x43\x65ll\x12\x13\n\x0bis_passable\x18\x01 \x01(\x08\"\x9b\x01\n\rFreespaceInfo\x12\r\n\x05x_min\x18\x01 \x01(\x02\x12\r\n\x05x_max\x18\x02 \x01(\x02\x12\r\n\x05y_min\x18\x03 \x01(\x02\x12\r\n\x05y_max\x18\x04 \x01(\x02\x12\r\n\x05z_min\x18\x05 \x01(\x02\x12\r\n\x05z_max\x18\x06 \x01(\x02\x12\x12\n\nresolution\x18\x07 \x01(\x02\x12\r\n\x05x_num\x18\x08 \x01(\x03\x12\r\n\x05y_num\x18\t \x01(\x03\"?\n\tFreespace\x12\x1c\n\x04info\x18\x01 \x01(\x0b\x32\x0e.FreespaceInfo\x12\x14\n\x05\x63\x65lls\x18\x02 \x03(\x0b\x32\x05.Cell\"`\n\tDetection\x12\x17\n\x06header\x18\x01 \x01(\x0b\x32\x07.Header\x12\x17\n\x06object\x18\x02 \x03(\x0b\x32\x07.Object\x12\x11\n\tfreespace\x18\x03 \x01(\x0c\x12\x0e\n\x06points\x18\x04 \x01(\x0c'
+  serialized_pb=b'\n\x0f\x64\x65tection.proto\"9\n\x07Point3D\x12\x0e\n\x01x\x18\x01 \x01(\x01:\x03nan\x12\x0e\n\x01y\x18\x02 \x01(\x01:\x03nan\x12\x0e\n\x01z\x18\x03 \x01(\x01:\x03nan\"a\n\x05\x42ox3D\x12\x18\n\x06\x63\x65nter\x18\x01 \x01(\x0b\x32\x08.Point3D\x12\x0e\n\x06length\x18\x02 \x01(\x02\x12\r\n\x05width\x18\x03 \x01(\x02\x12\x0e\n\x06height\x18\x04 \x01(\x02\x12\x0f\n\x07heading\x18\x05 \x01(\x02\"H\n\x06Header\x12\x0f\n\x07version\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\x04\x12\x1a\n\x12relative_timestamp\x18\x03 \x01(\x04\"\xe9\x02\n\x06Object\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1a\n\x04type\x18\x02 \x01(\x0e\x32\x0c.Object.Type\x12\x12\n\nconfidence\x18\x03 \x01(\x02\x12\x13\n\x03\x62ox\x18\x04 \x01(\x0b\x32\x06.Box3D\x12\x12\n\nvelocity_x\x18\x05 \x01(\x02\x12\x12\n\nvelocity_y\x18\x06 \x01(\x02\x12\x12\n\nangle_rate\x18\x07 \x01(\x02\x12\x0f\n\x07\x61\x63\x63\x65l_x\x18\x08 \x01(\x02\x12\r\n\x05valid\x18\t \x01(\x08\x12\x1e\n\x06status\x18\n \x01(\x0e\x32\x0e.Object.Status\x12\x0b\n\x03\x61ge\x18\x0b \x01(\r\"G\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07VEHICLE\x10\x01\x12\x0e\n\nPEDESTRIAN\x10\x02\x12\x0b\n\x07\x43YCLIST\x10\x03\x12\x08\n\x04\x43ONE\x10\x04\"<\n\x06Status\x12\r\n\tUNDEFINED\x10\x00\x12\n\n\x06STATIC\x10\x01\x12\x0b\n\x07STOPPED\x10\x02\x12\n\n\x06MOVING\x10\x03\"\x1b\n\x04\x43\x65ll\x12\x13\n\x0bis_passable\x18\x01 \x01(\x08\"\x9b\x01\n\rFreespaceInfo\x12\r\n\x05x_min\x18\x01 \x01(\x02\x12\r\n\x05x_max\x18\x02 \x01(\x02\x12\r\n\x05y_min\x18\x03 \x01(\x02\x12\r\n\x05y_max\x18\x04 \x01(\x02\x12\r\n\x05z_min\x18\x05 \x01(\x02\x12\r\n\x05z_max\x18\x06 \x01(\x02\x12\x12\n\nresolution\x18\x07 \x01(\x02\x12\r\n\x05x_num\x18\x08 \x01(\x03\x12\r\n\x05y_num\x18\t \x01(\x03\"?\n\tFreespace\x12\x1c\n\x04info\x18\x01 \x01(\x0b\x32\x0e.FreespaceInfo\x12\x14\n\x05\x63\x65lls\x18\x02 \x03(\x0b\x32\x05.Cell\"`\n\tDetection\x12\x17\n\x06header\x18\x01 \x01(\x0b\x32\x07.Header\x12\x17\n\x06object\x18\x02 \x03(\x0b\x32\x07.Object\x12\x11\n\tfreespace\x18\x03 \x01(\x0c\x12\x0e\n\x06points\x18\x04 \x01(\x0c'
 )
 
 
@@ -59,10 +59,45 @@ _OBJECT_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=383,
-  serialized_end=454,
+  serialized_start=480,
+  serialized_end=551,
 )
 _sym_db.RegisterEnumDescriptor(_OBJECT_TYPE)
+
+_OBJECT_STATUS = _descriptor.EnumDescriptor(
+  name='Status',
+  full_name='Object.Status',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNDEFINED', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='STATIC', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='STOPPED', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MOVING', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=553,
+  serialized_end=613,
+)
+_sym_db.RegisterEnumDescriptor(_OBJECT_STATUS)
 
 
 _POINT3D = _descriptor.Descriptor(
@@ -267,12 +302,48 @@ _OBJECT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='angle_rate', full_name='Object.angle_rate', index=6,
+      number=7, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='accel_x', full_name='Object.accel_x', index=7,
+      number=8, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='valid', full_name='Object.valid', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='Object.status', index=9,
+      number=10, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='age', full_name='Object.age', index=10,
+      number=11, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
     _OBJECT_TYPE,
+    _OBJECT_STATUS,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -281,7 +352,7 @@ _OBJECT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=252,
-  serialized_end=454,
+  serialized_end=613,
 )
 
 
@@ -312,8 +383,8 @@ _CELL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=456,
-  serialized_end=483,
+  serialized_start=615,
+  serialized_end=642,
 )
 
 
@@ -400,8 +471,8 @@ _FREESPACEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=486,
-  serialized_end=641,
+  serialized_start=645,
+  serialized_end=800,
 )
 
 
@@ -439,8 +510,8 @@ _FREESPACE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=643,
-  serialized_end=706,
+  serialized_start=802,
+  serialized_end=865,
 )
 
 
@@ -492,14 +563,16 @@ _DETECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=708,
-  serialized_end=804,
+  serialized_start=867,
+  serialized_end=963,
 )
 
 _BOX3D.fields_by_name['center'].message_type = _POINT3D
 _OBJECT.fields_by_name['type'].enum_type = _OBJECT_TYPE
 _OBJECT.fields_by_name['box'].message_type = _BOX3D
+_OBJECT.fields_by_name['status'].enum_type = _OBJECT_STATUS
 _OBJECT_TYPE.containing_type = _OBJECT
+_OBJECT_STATUS.containing_type = _OBJECT
 _FREESPACE.fields_by_name['info'].message_type = _FREESPACEINFO
 _FREESPACE.fields_by_name['cells'].message_type = _CELL
 _DETECTION.fields_by_name['header'].message_type = _HEADER
